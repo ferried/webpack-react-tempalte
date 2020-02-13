@@ -1,0 +1,54 @@
+{
+  "name": "react-report-data-chart-mobile",
+  "version": "1.0.0",
+  "description": "数据填报手机统计信息查看",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.config.js",
+    "build": "node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://222.30.192.242/yunzai-research/research-react/react-report-data-chart-mobile.git"
+  },
+  "author": "ferried<harlancui@outlook.com>",
+  "license": "",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "eslint-loader": "^3.0.3",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "postcss": "^7.0.26",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}
