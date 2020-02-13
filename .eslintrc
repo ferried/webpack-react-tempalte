@@ -1,7 +1,13 @@
 {
-  "extends": "standard",
-  "plugins": ["react","node","promise","standard"],
+  "extends": "airbnb",
+  "plugins": ["babel", "react", "node", "promise", "jsx-a11y", "import"],
+  "parser": "babel-eslint",
   "rules": {
-    "no-new": "off"
+    "no-new": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "eol-last": "off"
+  },
+  "env": {
+    "browser": true
   }
 }
