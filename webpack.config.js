@@ -3,18 +3,18 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @LastEditors  : ferried
- * @LastEditTime : 2020-02-13 17:09:20
+ * @LastEditTime : 2020-02-13 17:25:01
  * @Editor: Visual Studio Code
  * @Desc: nil
  * @License: nil
  */
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const pkg = require("./package.json");
-const webpack = require("webpack");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const pkg = require('./package.json')
+const webpack = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const banner = new webpack.BannerPlugin({
   banner: `
   REACT-REPORT-DATA-CHART-MOBILE v${pkg.version}
@@ -22,17 +22,17 @@ const banner = new webpack.BannerPlugin({
   @desc: ${pkg.description}
   @2020 ncov school chart
   Copyright (c) 2020 河北云在
-  `,
-});
+  `
+})
 
 module.exports = {
   watch: true,
-  mode: "production",
+  mode: 'production',
   entry: './src/index.js',
   output: {
-    filename: "[name].bundle.[hash].js",
-    chunkFilename: "[name].bundle.[hash].js",
-    path: path.resolve(__dirname, "dist/react-report-data-chart-mobile")
+    filename: '[name].bundle.[hash].js',
+    chunkFilename: '[name].bundle.[hash].js',
+    path: path.resolve(__dirname, 'dist/react-report-data-chart-mobile')
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -41,17 +41,17 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: [{ loader: "html-loader", options: { minimize: true } }]
+        use: [{ loader: 'html-loader', options: { minimize: true } }]
       },
       {
         test: /\.(png|svg|jpeg|jpg|gif)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[name]",
-              publicPath: "./src/assets/image/",
-              outputPath: "assets/image/"
+              name: '[name]',
+              publicPath: './src/assets/image/',
+              outputPath: 'assets/image/'
             }
           }
         ]
@@ -67,11 +67,11 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'],
+        use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader']
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
       }
     ]
   },
@@ -80,8 +80,8 @@ module.exports = {
       uglifyOptions: {
         mangle: true,
         output: {
-          beautify: true,
-        },
+          beautify: true
+        }
       }
     }),
     banner,
@@ -89,16 +89,16 @@ module.exports = {
       template: './src/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name]-[hash].css",
+      filename: '[name]-[hash].css'
     }),
     new CleanWebpackPlugin()
   ],
   devServer: {
-    contentBase: path.join(__dirname, "./dist"),
+    contentBase: path.join(__dirname, './dist'),
     port: 8002,
-    host: "0.0.0.0",
+    host: '0.0.0.0',
     historyApiFallback: true,
     hot: true,
     overlay: true
-  },
-};
+  }
+}

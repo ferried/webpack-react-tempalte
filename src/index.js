@@ -3,12 +3,11 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @LastEditors  : ferried
- * @LastEditTime : 2020-02-13 16:00:26
+ * @LastEditTime : 2020-02-13 17:20:37
  * @Editor: Visual Studio Code
  * @Desc: nil
  * @License: nil
  */
-import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.less';

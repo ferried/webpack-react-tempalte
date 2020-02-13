@@ -4,7 +4,7 @@
   "description": "数据填报手机统计信息查看",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.config.js",
-    "build": "node_modules/.bin/webpack"
+    "build": "eslint ./src/**.jsx --fix && node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -17,11 +17,19 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
@@ -34,7 +42,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "eslint": "^6.8.0",
     "eslint-friendly-formatter": "^4.0.1",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",

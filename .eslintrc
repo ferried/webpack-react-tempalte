@@ -1,0 +1,7 @@
+{
+  "extends": "standard",
+  "plugins": ["react","node","promise","standard"],
+  "rules": {
+    "no-new": "off"
+  }
+}
