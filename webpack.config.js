@@ -3,7 +3,7 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @LastEditors  : ferried
- * @LastEditTime : 2020-02-14 10:22:57
+ * @LastEditTime : 2020-02-14 14:57:45
  * @Editor: Visual Studio Code
  * @Desc: nil
  * @License: nil
@@ -28,7 +28,7 @@ const banner = new webpack.BannerPlugin({
 
 module.exports = {
   watch: true,
-  mode: 'production',
+  mode: 'development',
   entry: './src',
   output: {
     filename: '[name].bundle.[hash].js',
