@@ -3,32 +3,32 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @LastEditors  : ferried
- * @LastEditTime : 2020-02-14 15:07:32
+ * @LastEditTime : 2020-02-14 15:32:26
  * @Editor: Visual Studio Code
  * @Desc: nil
  * @License: nil
  */
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import DefaultLayout from '../layout/DefaultLayout';
 
 class Routes extends React.PureComponent {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <Switch>
           <Route path="/">
             <DefaultLayout>
-              <BrowserRouter>
+              <Router>
                 <Switch>
                   <Route path="/home" component={Home} />
                 </Switch>
-              </BrowserRouter>
+              </Router>
             </DefaultLayout>
           </Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
