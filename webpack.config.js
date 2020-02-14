@@ -3,7 +3,7 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @LastEditors  : ferried
- * @LastEditTime : 2020-02-13 18:05:43
+ * @LastEditTime : 2020-02-14 10:22:57
  * @Editor: Visual Studio Code
  * @Desc: nil
  * @License: nil
@@ -29,7 +29,7 @@ const banner = new webpack.BannerPlugin({
 module.exports = {
   watch: true,
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src',
   output: {
     filename: '[name].bundle.[hash].js',
     chunkFilename: '[name].bundle.[hash].js',
@@ -99,6 +99,7 @@ module.exports = {
       filename: '[name]-[hash].css',
     }),
     new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, './dist'),

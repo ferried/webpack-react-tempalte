@@ -1,16 +1,38 @@
+<!--
+ * @Date: 2020-02-13 15:51:03
+ * @Author: ferried
+ * @Email: harlancui@outlook.com
+ * @LastEditors: ferried
+ * @LastEditTime: 2020-02-14 12:32:09
+ * @Editor: Visual Studio Code
+ * @Desc: nil
+ * @License: nil
+ -->
 <!DOCTYPE html>
 
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>本地疫情</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if (!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+    }
+  </script>
+  <title>本地疫情</title>
 </head>
 
 <body>
-    <div id="root"></div>
+  <div id="root"></div>
 </body>
 
 </html>
